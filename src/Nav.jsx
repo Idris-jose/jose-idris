@@ -106,7 +106,7 @@ export default function Nav() {
                         transition: { duration: 0.2 }
                     }}
                 >
-                Jose idris
+               José Idris | Frontend Developer
                 </motion.h1>
                 
                 {/* Desktop Menu */}

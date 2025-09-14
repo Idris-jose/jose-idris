@@ -120,7 +120,7 @@ export default function Section1() {
   };
 
   // Split text into individual characters for stagger effect
-  const text = "Hi, I'm Idris Jose";
+  const text = "Hi, I'm Idris José";
   const textArray = text.split("");
 
   return (
