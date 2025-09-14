@@ -114,7 +114,7 @@ export default function Nav() {
                     className="hidden md:flex items-center gap-6"
                     variants={itemVariants}
                 >
-                    {['Home', 'Projects', 'Contact'].map((item, index) => (
+                    {['Home', 'Stack','Projects', 'Contact'].map((item, index) => (
                         <motion.a
               key={item}
               href={`#${item.toLowerCase()}`}
