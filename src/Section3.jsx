@@ -182,6 +182,7 @@ export default function Section3() {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
+      id="contact"
       className="flex flex-col items-center justify-center px-6 sm:px-10 md:px-16 lg:px-24 py-12 gap-8 min-h-screen relative overflow-hidden"
       variants={containerVariants}
       initial="hidden"

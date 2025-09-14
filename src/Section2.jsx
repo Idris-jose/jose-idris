@@ -207,6 +207,7 @@ export default function Section2() {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
+      id="projects"
       className="relative min-h-screen px-6 sm:px-10 md:px-16 lg:px-24 xl:px-32 py-10 bg-gradient-to-b from-gray-50 to-gray-100"
       variants={containerVariants}
       initial="hidden"

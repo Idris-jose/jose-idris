@@ -143,16 +143,24 @@ export default function Footer() {
           variants={itemVariants}
         >
           <motion.div className="flex flex-wrap gap-6 sm:gap-8">
-            {['Home', 'Skills', 'Projects', 'Contact'].map((item, index) => (
+            {['Home','Projects', 'Contact'].map((item, index) => (
               <motion.a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="text-white text-sm sm:text-base font-medium hover:text-[#4F46E5] transition-colors duration-200"
-                variants={linkVariants}
-                initial="rest"
-                whileHover="hover"
-                whileTap={{ scale: 0.95 }}
-              >
+              key={item}
+              href={`#${item.toLowerCase()}`}
+              className="text-white hover:text-gray-300 font-medium transition-colors duration-200 relative"
+              onClick={(e) => handleScroll(e, item.toLowerCase())}
+              whileHover={{
+                scale: 1.1,
+                color: '#4F46E5',
+              }}
+              whileTap={{ scale: 0.95 }}
+              initial={{ opacity: 0, y: -20 }}
+              animate={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 0.3 + index * 0.1 },
+              }}
+            >
                 {item}
               </motion.a>
             ))}
@@ -167,7 +175,9 @@ export default function Footer() {
           <motion.div className="flex gap-4">
             {/* GitHub */}
             <motion.a
-              href="#"
+              href="https://github.com/Idris-jose"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-white hover:text-[#4F46E5] transition-colors duration-200"
               variants={iconVariants}
               initial="rest"
@@ -182,7 +192,9 @@ export default function Footer() {
 
             {/* LinkedIn */}
             <motion.a
-              href="#"
+              href="https://www.linkedin.com/in/jose-idris"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-white hover:text-[#4F46E5] transition-colors duration-200"
               variants={iconVariants}
               initial="rest"
@@ -195,7 +207,9 @@ export default function Footer() {
 
             {/* Twitter */}
             <motion.a
-              href="#"
+              href="https://x.com/IdrisByte"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-white hover:text-[#4F46E5] transition-colors duration-200"
               variants={iconVariants}
               initial="rest"

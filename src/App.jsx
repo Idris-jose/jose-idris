@@ -3,6 +3,7 @@ import Section1 from './Section1';
 import Section2 from './Section2';
 import Section3 from './Section3';
 import Footer from './Footer';
+import Stack from './Stack';
 import Nav from './Nav';
 import './App.css';
 
@@ -89,6 +90,10 @@ function App() {
         {/* Sections with staggered animations */}
         <motion.div variants={sectionVariants}>
           <Section1 />
+        </motion.div>
+
+          <motion.div variants={sectionVariants}>
+          <Stack />
         </motion.div>
         
         <motion.div variants={sectionVariants}>

@@ -124,53 +124,48 @@ export default function Section1() {
   const textArray = text.split("");
 
   return (
-    <section
+   <section
+      id="home" // Added for Nav component scrolling
       style={{
         backgroundImage: `url(${background})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
       }}
-      className="flex flex-col md:flex-row items-center justify-center min-h-screen px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 py-10 gap-10 relative overflow-hidden"
+      className="flex flex-col items-center justify-center min-h-screen px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 py-10 gap-8 relative overflow-hidden"
     >
-     
-
       <motion.div
-        className="flex flex-col md:flex-row items-center justify-center gap-10 w-full"
+        className="flex flex-col md:flex-row items-center  gap-8 w-full max-w-6xl"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
         {/* Profile Image */}
-        <motion.div 
-          className="flex-shrink-0 relative"
+        <motion.div
+          className="flex-shrink-0 mx-auto md:mx-auto" // Center image on small screens, left-align on medium+
           variants={imageVariants}
         >
-          <motion.div
-            animate={floatingAnimation}
-            className="relative"
-          >
+          <motion.div animate={floatingAnimation} className="relative">
             <motion.img
               src={pfp}
-              alt="Profile"
-              className="w-40 h-40 sm:w-72 sm:h-72 md:w-64 md:h-80 lg:w-72 lg:h-[420px] rounded-2xl object-cover shadow-xl "
+              alt="Profile of Jose Idris"
+              className="w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-80 lg:w-72 lg:h-[420px] rounded-2xl object-cover shadow-xl"
               whileHover={{
                 scale: 1.05,
                 rotate: 2,
-                transition: { duration: 0.3 }
+                transition: { duration: 0.3 },
               }}
             />
           </motion.div>
-          
         </motion.div>
 
         {/* Text Section */}
-        <motion.div 
-          className="flex flex-col w-full max-w-3xl space-y-4 text-center md:text-left"
+        <motion.div
+          className="flex flex-col w-full max-w-3xl space-y-4 text-left" // Changed to text-left for all screens
           variants={itemVariants}
         >
           {/* Animated heading */}
-          <motion.h1 
+          <motion.h1
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight"
             variants={textVariants}
           >
@@ -181,28 +176,28 @@ export default function Section1() {
                 className="inline-block"
                 whileHover={{
                   scale: 1.2,
-                  color: "#4F46E5",
-                  transition: { duration: 0.2 }
+                  color: '#4F46E5',
+                  transition: { duration: 0.2 },
                 }}
               >
-                {char === " " ? "\u00A0" : char}
+                {char === ' ' ? '\u00A0' : char}
               </motion.span>
             ))}
           </motion.h1>
 
-          <motion.p 
+          <motion.p
             className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-gray-100"
             variants={itemVariants}
             whileHover={{
               scale: 1.02,
-              color: "#4F46E5",
-              transition: { duration: 0.3 }
+              color: '#4F46E5',
+              transition: { duration: 0.3 },
             }}
           >
             Frontend Developer
           </motion.p>
 
-          <motion.p 
+          <motion.p
             className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-gray-200"
             variants={itemVariants}
           >
@@ -212,24 +207,25 @@ export default function Section1() {
           </motion.p>
 
           {/* Neobrutalism Buttons */}
-          <motion.div 
-            className="flex flex-wrap justify-center md:justify-start gap-4 pt-4"
+          <motion.div
+            className="flex flex-wrap justify-start gap-4 pt-4" // Changed to justify-start for left alignment
             variants={itemVariants}
           >
-         <motion.a
-  className="px-5 py-2 sm:px-7 sm:py-3 bg-[#4F46E5] text-white text-sm sm:text-base md:text-lg font-bold rounded-lg border-2 border-black"
-  variants={buttonVariants}
-  href="mailto:idrisjose11@gmail.com"
-  target="_blank"
-  rel="noopener noreferrer"
-  initial="rest"
-  whileHover="hover"
-  whileTap="tap"
-  style={{ display: "inline-block", textDecoration: "none" }}
->
-  Hire me
-</motion.a>
-            
+            <motion.a
+              className="px-5 py-2 sm:px-7 sm:py-3 bg-[#4F46E5] text-white text-sm sm:text-base md:text-lg font-bold rounded-lg border-2 border-black"
+              variants={buttonVariants}
+              href="mailto:idrisjose11@gmail.com?subject=Hire%20Request&body=Hello%20Idris,%20I%20would%20like%20to%20discuss%20a%20project."
+              target="_blank"
+              rel="noopener noreferrer"
+              initial="rest"
+              whileHover="hover"
+              whileTap="tap"
+              style={{ display: 'inline-block', textDecoration: 'none' }}
+              aria-label="Send an email to Idris to discuss hiring"
+            >
+              Hire me
+            </motion.a>
+
             <motion.a
               className="px-5 py-2 sm:px-7 sm:py-3 bg-white text-black text-sm sm:text-base md:text-lg font-bold rounded-lg border-2 border-black flex items-center justify-center"
               variants={secondButtonVariants}
@@ -239,7 +235,8 @@ export default function Section1() {
               initial="rest"
               whileHover="hover"
               whileTap="tap"
-              style={{ display: "inline-block", textDecoration: "none" }}
+              style={{ display: 'inline-block', textDecoration: 'none' }}
+              aria-label="Visit Jose Idris's GitHub profile"
             >
               Github Profile
             </motion.a>

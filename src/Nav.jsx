@@ -116,21 +116,22 @@ export default function Nav() {
                 >
                     {['Home', 'Projects', 'Contact'].map((item, index) => (
                         <motion.a
-                            key={item}
-                            href={`#${item.toLowerCase()}`}
-                            className="text-white hover:text-gray-300 font-medium transition-colors duration-200 relative"
-                            whileHover={{
-                                scale: 1.1,
-                                color: "#4F46E5"
-                            }}
-                            whileTap={{ scale: 0.95 }}
-                            initial={{ opacity: 0, y: -20 }}
-                            animate={{ 
-                                opacity: 1, 
-                                y: 0,
-                                transition: { delay: 0.3 + index * 0.1 }
-                            }}
-                        >
+              key={item}
+              href={`#${item.toLowerCase()}`}
+              className="text-white hover:text-gray-300 font-medium transition-colors duration-200 relative"
+              onClick={(e) => handleScroll(e, item.toLowerCase())}
+              whileHover={{
+                scale: 1.1,
+                color: '#4F46E5',
+              }}
+              whileTap={{ scale: 0.95 }}
+              initial={{ opacity: 0, y: -20 }}
+              animate={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 0.3 + index * 0.1 },
+              }}
+            >
                             {item}
                             <motion.div
                                 className="absolute -bottom-1 left-0 h-0.5 bg-[#4F46E5]"
@@ -194,7 +195,7 @@ export default function Nav() {
                         exit="closed"
                     >
                         <div className="px-6 pb-4 space-y-4">
-                            {['Home', 'Projects', 'Contact'].map((item) => (
+                            {['Home','Stack', 'Projects', 'Contact'].map((item) => (
                                 <motion.a
                                     key={item}
                                     href={`#${item.toLowerCase()}`}
