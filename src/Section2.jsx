@@ -18,7 +18,7 @@ export default function Section2() {
       stack: [FaReact, SiTailwindcss, SiFirebase, FaPython ],
       description:
         "A dynamic and responsive webapp that allows student to use ai powered tools to get prepared for exams.",
-      Link:"https://studdy-buddy-helper.vercel.app/"
+      Link:"https://studdybuddy-school.vercel.app/"
     },
     {
       img: watchlister,

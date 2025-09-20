@@ -100,11 +100,7 @@ export default function Nav() {
                 <motion.h1 
                     className="text-2xl font-bold text-white"
                     variants={itemVariants}
-                    whileHover={{
-                        scale: 1.1,
-                        color: "#4F46E5",
-                        transition: { duration: 0.2 }
-                    }}
+                 
                 >
                José Idris | Frontend Developer
                 </motion.h1>
