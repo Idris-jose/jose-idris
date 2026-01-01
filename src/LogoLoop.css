@@ -1,0 +1,42 @@
+.logo-loop {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  background: transparent; /* better for your section */
+}
+
+.logo-track {
+  display: flex;
+  align-items: center;
+  animation: scroll linear infinite;
+}
+
+.logo-item {
+  flex: 0 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* React Icons (SVGs) */
+.logo-item svg {
+  width: 48px;
+  height: 48px;
+  color: white; /* or any color you want */
+  transition: transform 0.3s ease;
+}
+
+.logo-item svg:hover {
+  transform: scale(1.15);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
