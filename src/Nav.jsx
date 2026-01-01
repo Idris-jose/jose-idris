@@ -138,7 +138,7 @@ export default function Nav() {
                         </motion.a>
                     ))}
                       <motion.a
-                                   href="/cv-Jose idris" // Place your CV file in the public folder as cv.pdf
+                                   href="/Idris_Jose_CV.pdf" // Place your CV file in the public folder as cv.pdf
                                    download="jose idris-CV.pdf"
                                 className="inline-block px-6 py-2 bg-white text-black font-bold rounded-lg border-2 border-white shadow-md mt-2"
                                 onClick={() => setIsOpen(false)}
@@ -209,7 +209,7 @@ export default function Nav() {
                                 </motion.a>
                             ))}
                             <motion.a
-                                   href="/cv-Jose idris" // Place your CV file in the public folder as cv.pdf
+                                   href="/Idris_Jose_CV.pdf" // Place your CV file in the public folder as cv.pdf
                                 download="jose idris-CV.pdf"
                                 className="inline-block px-6 py-2 bg-white text-black font-bold rounded-lg border-2 border-white shadow-md mt-2"
                                 onClick={() => setIsOpen(false)}

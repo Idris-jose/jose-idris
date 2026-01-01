@@ -239,7 +239,7 @@ export default function Section3() {
               </motion.button>
               
               <motion.a
-                href="/cv-Jose idris" // Place your CV file in the public folder as cv.pdf
+                href="/Idris_Jose_CV.pdf" // Place your CV file in the public folder as cv.pdf
                 download="jose idris-CV.pdf"
                 className="px-5 py-2 sm:px-7 sm:py-3 bg-white text-black text-sm sm:text-base md:text-lg font-bold rounded-lg border-2 border-black flex items-center justify-center"
                 variants={secondButtonVariants}
